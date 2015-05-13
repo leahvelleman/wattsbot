@@ -1,9 +1,18 @@
 # wattsbot
-Algorithmically generated poetry in the style of Isaac Watts
+This is an experiment in generative poetry with rhyme and meter. 
 
-This is an experiment in generative poetry with rhyme and meter. Example output can be found on Twitter at @watts_ebooks. 
+Example output, based on the psalms and hymns of Isaac Watts, can be found on Twitter at @watts_ebooks. 
 
-## Isaac Watts
+## Usage
+
+Currently only usable from the python shell. If parsedpsalms.txt and wattsbot.py are in an accessible directory, then:
+
+- `m = VerseMarkov(open("parsedpsalms.txt"))` creates a model based on the text of Watt's hymns.
+- `m.generate(length, rhyme=None)` generates a line of `length` syllables — 6 and 8 are ideal. If a `rhyme` is specified, the line will rhyme with it. If no rhyming line can be generated, it will return `None`.
+- `m.cmverse(), m.lmverse()` and `m.smverse()` generate full stanzas in Common Meter, Long Meter and Short Meter respectively.
+
+
+## Who is this guy?
 
 Watts was probably the greatest author of hymn lyrics in English. (The words to "Joy to the World," 
 "Oh God, Our Help in Ages Past" and "This is the Day the Lord Has Made" are all his, and he is the
@@ -19,3 +28,5 @@ There are a few things that make him a convenient author to imitate.
 The consistent rhyme and meter make it easy for a program to scan his poems correctly. His prolific output and
 repetitive imagery solves some of the problems with data sparseness that can come up doing this sort of thing
 with a limited source corpus.
+
+
