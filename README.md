@@ -9,7 +9,25 @@ Currently only usable from the python shell. If parsedpsalms.txt and wattsbot.py
 
 - `m = VerseMarkov(open("parsedpsalms.txt"))` creates a model based on the text of Watt's hymns.
 - `m.generate(length, rhyme=None)` generates a line of `length` syllables — 6 and 8 are ideal. If a `rhyme` is specified, the line will rhyme with it. If no rhyming line can be generated, it will return `None`.
-- `m.cmverse(), m.lmverse()` and `m.smverse()` generate full stanzas in Common Meter, Long Meter and Short Meter respectively.
+- `m.cmverse(), m.lmverse()` and `m.smverse()` generate full stanzas in Common Meter, Long Meter and Short Meter respectively. (This may take a long time. They will print their progress to the screen occasionally.) Some representative sample output:
+```
+>>> m.cmverse()
+at home, abroad, i am the lord,
+no burning heats by day
+and glory giv'n, by all the seas,
+and gave his soul away.
+
+>>> m.lmverse()
+for thou alone dost wondrous things,
+for thou alone dost thou not raise
+my panting heart cries out for god;
+my god! how wondrous are his ways!
+
+>>> m.smverse()
+the lord my shepherd is,
+i shall arise to praise
+and will the growing numbers end,
+the numbers of thy praise.
 
 
 ## Who is this guy?
