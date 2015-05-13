@@ -14,10 +14,10 @@ Currently only usable from the python shell. If parsedpsalms.txt and wattsbot.py
 Some representative sample output:
 ```
 >>> m.cmverse()
-at home, abroad, i am the lord,
-no burning heats by day
-and glory giv'n, by all the seas,
-and gave his soul away.
+lord, thou hast searched and seen me through,
+he doth my soul detest
+in jesus' blood, we're marching through
+immanuel's ground to rest.
 
 >>> m.lmverse()
 for thou alone dost wondrous things,
