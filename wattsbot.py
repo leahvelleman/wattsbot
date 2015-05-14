@@ -208,8 +208,8 @@ class VerseMarkov(object):
     if type(source) is str:
       self.data = source
     if type(source) is file:
-      f.seek(0)
-      self.data = f.read()
+      source.seek(0)
+      self.data = source.read()
     self.words = self.read_words()
     self.digest()
 
@@ -332,6 +332,8 @@ class VerseMarkov(object):
       print l3
       if l3 is not None:
         l2 = self.generate(6, seed = [l3[0], l3[1]], rhyme = l4[-1])
+        if l2 is None:
+          l2 = self.generate(6, rhyme = l4[-1])
         print l2
         if l2 is not None:
           l1 = self.generate(6, seed = [l2[0], l2[1]])
